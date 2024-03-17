@@ -1353,3 +1353,4 @@ t = 0
 # print("Вносим изменения в GitHub ))")
 # print("Внёс изменения")
 print("Hello")
+print('Hi')
