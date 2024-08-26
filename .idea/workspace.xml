@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bb893035-d362-4b14-be10-ed7f80ce6ca6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pythonProject6.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Escape-последовательности_(экранирование).JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/InstallPython.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/pycharm.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/python.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Арифметические_операторы.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Ввод_данных.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Зарезервированные_слова.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Именование_переменных.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Комментарии.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Литералы.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Множественное_присваивание.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Оператор_операнды.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Операторы присваивания.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Основные типы данных.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Переменные.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Переменные_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Практика/4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Практика/5.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Преобразование_строк.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Преобразование_типов.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Приоритет_операторов.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Приоритет_операторов_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Приоритет_операторов_2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Термины.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Тип_данных.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Типизация данных.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Функции_преобразования_чисел.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Целочисленное_деление.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Числовой_тип_данных.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Числовые_выражения.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/1/Числовые_выражения_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/10/Операции с множествами.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/10/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/10/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/10/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/10/Практика/4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/10/Практика/5.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/10/Практика/6.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/10/Практика/7.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/11/zip.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/11/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/11/Практика/10.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/11/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/11/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/11/Практика/4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/11/Практика/5.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/11/Практика/6.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/11/Практика/7.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/11/Практика/8.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/11/Практика/9.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/11/Разряженная-матрица.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/12/LEGB rule.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/12/LEGB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/12/Scope.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/12/Области видимости.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/12/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/12/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/12/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/12/Практика/4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/12/Практика/5.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/13/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/13/Практика/10.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/13/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/13/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/13/Практика/4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/13/Практика/5.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/13/Практика/6.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/13/Практика/7.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/13/Практика/8.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/13/Практика/9.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/14/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/14/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/15/ASCII.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/15/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/15/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/15/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/15/Префиксы_строк.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/15/Системы счисления.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/15/Таблица символов Юникода.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/15/Таблица соответствия.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Capture.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Regular expression operations.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/regexp.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/regexp_look_ahead.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Как формируются римские числа.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Квантификаторы.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Комбинации.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Метасимволы.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Практика/4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Практика/5.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Практика/6.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Практика/7.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Специальные_пары_символов.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Флаги.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/17/Флаги_в_регулярном_выражении.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Поиск/Бинарный поиск в упорядоченном списке целых чисел.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Поиск/Последовательный поиск в списке целых чисел.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Практика/D_Z_1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Практика/D_Z_2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Рекурсия/Последовательность рекурсивных возвратов для сложения списка чисел.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Рекурсия/Последовательность рекурсивных вызовов для сложения списка чисел.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Рекурсия/Преобразование_целого_числа_в_строку_по_основанию_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Рекурсия/Рекурсивный обход вложенного списка.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Сортировка/1_Пузырьковая сортировка.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Сортировка/2_merge-sort.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Сортировка/2_Разбиение списка в сортировке слиянием.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Сортировка/2_Списки, которые соединяются вместе_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Сортировка/3_1_Сортировка Шелла.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Сортировка/3_2_Сортировка Шелла.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Сортировка/3_3_Сортировка Шелла.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Сортировка/4_1_Быстрая сортировка Хоара.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Сортировка/4_2_Быстрая сортировка Хоара 2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Сортировка/4_3_Быстрая сортировка.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Сортировка/Последовательный поиск в упорядоченном списке целых чисел.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/18/Сортировка/Сортировка Шелла.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/19/open.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/19/Атрибуты файлового объекта.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/19/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/19/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/19/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/19/Практика/4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/19/Практика/5.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/19/Режимы открытия файлов 1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/19/Режимы открытия файлов 2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/19/Режимы открытия файлов.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/PEP8.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/Zen_of_Python_(PEP20).JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/python_code_styleguide.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/Логические_операторы.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/Операторы_сравнения.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/Практика/4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/Практика/5.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/Таблицы истинности/Оператор_and.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/Таблицы истинности/Оператор_not.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/Таблицы истинности/Оператор_or.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/Тернарное_выражение.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/Тернарное_выражение_1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/2/Читабельность_кода.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/20/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/20/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/20/Практика/2_1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/20/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/20/Практика/4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/21/Виды современной системы контроля версий/1_Централизованная.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/21/Виды современной системы контроля версий/2_Распределенная.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/3/Еxceptions.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/3/Основные_исключения.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/3/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/3/Практика/10.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/3/Практика/11.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/3/Практика/12.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/3/Практика/13.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/3/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/3/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/3/Практика/4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/3/Практика/5.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/3/Практика/6.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/3/Практика/7.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/3/Практика/8.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/3/Практика/9.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/4/list.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/4/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/4/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/4/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/5/Генераторное_выражение.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/5/Методы_списков.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/5/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/5/Практика/10.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/5/Практика/11.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/5/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/5/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/5/Практика/4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/5/Практика/5.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/5/Практика/6.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/5/Практика/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/5/Практика/8.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/5/Практика/9.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/6/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/6/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/6/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/6/Практика/4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/Category.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/Standard_Library.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/locale.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/math.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/time.struct_time.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/Методы_time.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/Модуль_math.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/Модуль_time.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/Практика/0.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/Практика/4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/Практика/5.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/Практика/6.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/7/Практика/7.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/8/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/8/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/8/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/8/Практика/4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/8/Практика/5.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/8/Практика/6.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/8/Ряд_Фибоначчи.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/9/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/9/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/9/Практика/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/9/Практика/2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/9/Практика/3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/9/Практика/4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dz/dz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2ggMqx29Vy3767MPcyckzXryOvs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Александр/PycharmProjects/pythonProject/fourth/devsearch/users/templates/users&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Александр\PycharmProjects\pythonProject\fourth\devsearch\users\templates\users" />
+      <recent name="C:\Users\Александр\PycharmProjects\pythonProject\fourth\devsearch\media\profiles" />
+      <recent name="C:\Users\Александр\PycharmProjects\pythonProject\fourth\devsearch\projects\templates\projects" />
+      <recent name="C:\Users\Александр\PycharmProjects\pythonProject\fourth\devsearch\media" />
+      <recent name="C:\Users\Александр\PycharmProjects\pythonProject\fourth\devsearch\projects\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Александр\PycharmProjects\pythonProject\python_project\proj\personal_portfolio\blog\templates\blog" />
+      <recent name="C:\Users\Александр\PycharmProjects\pythonProject\third\todos\todo" />
+      <recent name="C:\Users\Александр\PycharmProjects\pythonProject\two\templates" />
+      <recent name="C:\Users\Александр\PycharmProjects\pythonProject\two" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb893035-d362-4b14-be10-ed7f80ce6ca6" name="Changes" comment="" />
+      <created>1716114961776</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716114961776</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python_project/proj/personal_portfolio/skills/views.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/third/todos/todo/admin.py</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
