@@ -1,0 +1,48 @@
+{% extends 'products/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+
+
+<div class="slider">
+
+<div class="txt">По данным Forbes, Nike – наиболее дорогая фирма в мире,
+    производящая спортивную обувь. Штаб-квартира Найк расположена
+    в штате Орегон, в США. Товары изготавливаются за пределами страны,
+    в основном в азиатском регионе. Фирма производит одежду для спорта,
+    и конечно, разнообразные кроссовки Nike.</div>
+      <!-- list Items -->
+      <div class="list">
+          {% for project in projects %}
+        <div class="item active">
+          <img src="{{ project.image.url }}" />
+          <div class="content">
+            <p>Sneakers</p>
+            <h2>{{ project.title }}</h2>
+            <p>
+              {{ project.description }}
+            </p>
+          </div>
+        </div>
+          {% endfor %}
+      </div>
+      <!-- button arrows -->
+      <div class="arrows">
+        <button id="prev"><</button>
+        <button id="next">></button>
+      </div>
+      <!-- thumbnail -->
+      <div class="thumbnail">
+          {% for project in projects %}
+        <div class="item active">
+          <img src="{{ project.image.url }}" />
+          <div class="content">{{ project.title }}</div>
+        </div>
+          {% endfor %}
+      </div>
+</div>
+
+{% endblock %}
