@@ -2,6 +2,7 @@ let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let thumbnails = document.querySelectorAll('.thumbnail .item');
+let buybtns = document.querySelectorAll('.buybtn');
 
 items.forEach((item, index) => {
   if (index > 0) {
@@ -48,10 +49,10 @@ function showSlider() {
   thumbnails[itemActive].classList.add('active');
 
   // clear auto time run slider
-//  clearInterval(refreshInterval);
-//  refreshInterval = setInterval(() => {
-//    next.click();
-//  }, 5000);
+  //  clearInterval(refreshInterval);
+  //  refreshInterval = setInterval(() => {
+  //    next.click();
+  //  }, 5000);
 }
 
 // click thumbnail
@@ -76,7 +77,3 @@ thumbnails.forEach((thumbnail, index) => {
 //     header.classList.remove('sticky');
 //   }
 // }
-
-
-
-

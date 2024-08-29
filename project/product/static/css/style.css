@@ -233,9 +233,14 @@ header .menu {
 .thumbnail .item .content {
   position: absolute;
   font-size: 12px;
-  inset: auto 10px 10px 10px;
+  inset: -6px 10px 10px 10px;
   color: #000000;
 }
+.content .price {
+  font-size: 20px;
+  margin-top: 145px;
+}
+
 @media screen and (max-width: 678px) {
   .thumbnail {
     justify-content: start;
@@ -295,6 +300,7 @@ section {
   box-sizing: border-box;
   border-radius: 15px;
   max-width: 600px;
+
   margin: 0 auto;
   text-align: center;
 }
@@ -304,11 +310,29 @@ section {
   padding-bottom: 40px;
 }
 
-.txt {
-  z-index: 100000;
+.buy {
+  z-index: 999;
   color: #000000;
   margin: auto 200px;
   margin-top: 200px;
-  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+  backdrop-filter: blur(5px);
+  position: fixed;
+}
+.buy.active {
   opacity: 1;
+}
+
+.buybtn {
+  margin-left: 170px;
+  margin-top: -50px;
+  font-size: 20px;
+  position: absolute;
+  background-color: #acff8b;
+  text-decoration: none;
+  border: none;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
 }

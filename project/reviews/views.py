@@ -6,7 +6,7 @@ from .forms import TodoForm
 def reviews(request):
     reviews = Review.objects.order_by('-created')
     if request.method == 'GET':
-        return render(request, 'review/todos.html',{'reviews':reviews,'form':TodoForm()})
+        return render(request, 'review/reviews.html',{'reviews':reviews,'form':TodoForm()})
     else:
         try:
             form = TodoForm(request.POST)
@@ -15,7 +15,7 @@ def reviews(request):
             new_todo.save()
             return redirect('reviews')
         except ValueError:
-            return render(request, 'reviews/todos.html',
+            return render(request, 'reviews/reviews.html',
                           {'reviews':reviews,'form': TodoForm(), 'error': 'Переданы неверные данные. Попробуйте ещё раз'})
 
 # def detail(request,blog_id):

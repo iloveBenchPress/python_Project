@@ -6,40 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="bb893035-d362-4b14-be10-ed7f80ce6ca6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/blog/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/blog/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/blog/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/blog/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/blog/templates/blog/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/templates/review/details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/blog/templates/blog/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/templates/products/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/blog/templates/blog/todos.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/templates/review/todos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/blog/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/project/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/static/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/static/skills/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/static/products/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/static/skills/resume.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/static/products/resume.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/static/skills/sneak1.png" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/static/products/sneak1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/static/skills/sneak2.png" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/static/products/sneak2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/static/skills/sneak3.png" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/static/products/sneak3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/static/skills/wc.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/static/products/wc.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/templates/skills/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/templates/products/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/templates/skills/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/templates/products/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/skills/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/product/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/product/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/static/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/product/templates/products/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/templates/products/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/reviews/templates/review/todos.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/templates/review/reviews.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/reviews/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
