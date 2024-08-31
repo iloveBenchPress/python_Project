@@ -18,8 +18,6 @@ def reviews(request):
             return render(request, 'reviews/reviews.html',
                           {'reviews':reviews,'form': TodoForm(), 'error': 'Переданы неверные данные. Попробуйте ещё раз'})
 
-# def detail(request,blog_id):
-#     reviews = get_object_or_404(Blog,pk=blog_id)
-#     return render(request,'reviews/details.html',{'reviews':reviews})
+
 
 

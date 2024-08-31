@@ -7,11 +7,26 @@
     <list default="true" id="bb893035-d362-4b14-be10-ed7f80ce6ca6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/project/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/media/skills/images/hooks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/media/skills/images/hooks_Bhs6hK7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/media/skills/images/hooks_D1jg0li.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/media/skills/images/html_css.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/media/skills/images/js.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/media/skills/images/next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/media/skills/images/python.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/media/skills/images/redux.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/media/skills/images/redux_Gv7YSN4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/media/skills/images/redux_fw7z5eI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/media/skills/images/sneak1_jOQBgza.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/media/skills/images/sneak1_k6wfu5C.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/media/skills/images/sneak1_xZAkZMg.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/product/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/product/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/static/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/product/templates/products/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/templates/products/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/reviews/templates/review/todos.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/templates/review/reviews.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/reviews/templates/review/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/product/templates/products/details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/reviews/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/reviews/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/reviews/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,23 +56,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Александр/PycharmProjects/pythonProject/fourth/devsearch/users/templates/users&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/pythonProject/project/product/templates/products",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\pythonProject\project\product\templates\products" />
       <recent name="C:\Users\Александр\PycharmProjects\pythonProject\fourth\devsearch\users\templates\users" />
       <recent name="C:\Users\Александр\PycharmProjects\pythonProject\fourth\devsearch\media\profiles" />
       <recent name="C:\Users\Александр\PycharmProjects\pythonProject\fourth\devsearch\projects\templates\projects" />
       <recent name="C:\Users\Александр\PycharmProjects\pythonProject\fourth\devsearch\media" />
-      <recent name="C:\Users\Александр\PycharmProjects\pythonProject\fourth\devsearch\projects\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\pythonProject\project\product\templates\products" />

@@ -110,7 +110,6 @@ header .menu {
   height: 100vh;
   margin-top: -50px;
   position: relative;
-  margin-bottom: 400px;
   background-color: #ffffff;
   background-image: linear-gradient(to top, #bcff7d 1%, transparent);
 }
@@ -199,8 +198,8 @@ header .menu {
 }
 
 .thumbnail {
-  position: absolute;
-  bottom: 50px;
+  position: relative;
+  top: 500px;
   z-index: 11;
   display: flex;
   gap: 25px;
@@ -335,4 +334,17 @@ section {
   border: 1px solid #000000;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.buyfon {
+  display: flex;
+}
+.buyimg {
+  margin: -90px 60px auto;
+}
+.buysec div {
+  margin-bottom: 20px;
+}
+.buysec {
+  margin-left: 10px;
 }
