@@ -77,3 +77,23 @@ thumbnails.forEach((thumbnail, index) => {
 //     header.classList.remove('sticky');
 //   }
 // }
+
+const block = document.querySelector('.thumbnail'); // Выбираем блок по селектору
+const item = block.querySelectorAll('.item'); // Выбираем все элементы с классом "item" внутри блока
+const count = item.length; // Получаем количество элементов
+
+const slider = document.querySelector('.slider');
+let ind = count / 6;
+
+function updateSliderPosition() {
+  if (!Number.isInteger(ind)) {
+    slider.style.marginBottom = parseInt(ind) * block.offsetHeight - 25 * parseInt(ind) + 'px';
+    console.log(parseInt(ind));
+  } else {
+    slider.style.marginBottom = parseInt(ind) * block.offsetHeight - 25 * parseInt(ind) + 'px';
+  }
+}
+
+window.onload = updateSliderPosition;
+updateSliderPosition();
+console.log(block.offsetHeight, slider.style.marginBottom);

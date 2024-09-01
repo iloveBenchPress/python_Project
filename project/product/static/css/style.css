@@ -115,6 +115,7 @@ header .menu {
 }
 .slider .list .item {
   position: absolute;
+
   inset: 0 0 0 0;
   overflow: hidden;
   opacity: 0;
@@ -199,7 +200,7 @@ header .menu {
 
 .thumbnail {
   position: relative;
-  top: 500px;
+  top: 530px;
   z-index: 11;
   display: flex;
   gap: 25px;
