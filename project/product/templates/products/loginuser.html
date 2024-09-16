@@ -1,0 +1,21 @@
+{% extends 'products/base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Авторизация</h1>
+
+
+<p class="aut">Aвторизируйтесь для больших возможностей </p>
+
+<div class="log">
+<form method="post" class="bg">
+    <h3 class="err">{{error}}</h3>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="center">
+        <button class="btn">Авторизация</button>
+    </div>
+</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'products/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<h1>Регистрация: </h1>
+
+<h2 style="color: orangered">{{ error }}</h2>
+
+<div class="log">
+<form method="post" class="register bg">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn">Зарегестрироваться</button>
+</form>
+</div>
+{% endblock %}

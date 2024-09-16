@@ -99,6 +99,17 @@ header img {
 header .menu {
   padding: 0;
   margin: 0;
+  margin-left: 600px;
+  margin-right: 150px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-weight: 500;
+}
+.menu2 {
+  padding: 0;
+  margin: 0;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -200,13 +211,13 @@ header .menu {
 
 .thumbnail {
   position: relative;
-  top: 530px;
+  top: 520px;
   z-index: 11;
   display: flex;
   gap: 25px;
   width: 100%;
   height: 250px;
-  padding: 0 65px;
+  padding: 0 55px;
   box-sizing: border-box;
   flex-wrap: wrap;
 }
@@ -300,7 +311,6 @@ section {
   box-sizing: border-box;
   border-radius: 15px;
   max-width: 600px;
-
   margin: 0 auto;
   text-align: center;
 }
@@ -339,13 +349,69 @@ section {
 
 .buyfon {
   display: flex;
+  margin: auto 250px;
+  margin-top: 62px;
 }
 .buyimg {
-  margin: -90px 60px auto;
+  margin: -90px 40px auto;
+  width: 400px;
 }
 .buysec div {
   margin-bottom: 20px;
 }
 .buysec {
-  margin-left: 10px;
+  margin-left: 40px;
+}
+
+.btnbuy {
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background: #acff8b;
+  box-shadow: 0 2px 12px 2px #050505;
+  font-size: 20px;
+  transition: 0.5s;
+  border: 6px solid #1aff00;
+}
+
+.btnbuy:hover {
+  background-color: #1aff00;
+  color: #ffffff;
+}
+
+.bprice {
+  font-size: 25px;
+}
+
+.top2 {
+  border: none;
+  background-color: #000000;
+  color: #fff;
+  font-size: 15px;
+}
+
+.log {
+  margin-bottom: 90px;
+}
+
+.logoutus {
+}
+
+.reg {
+  margin-left: 160px;
+}
+
+.logo2 {
+  width: 32px;
+  position: absolute;
+  margin-left: 83px;
+  margin-top: -3px;
+}
+.err {
+  text-align: center;
+}
+.aut {
+  text-align: center;
 }

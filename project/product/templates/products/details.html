@@ -7,10 +7,10 @@
     <img class="buyimg" src="{{ product.image.url }}" />
         <div class="buysec">
             <div>{{ product.description }}</div></br>
-            <div>{{ product.price }} р.</div></br>
+            <div class="bprice">{{ product.price }} р.</div></br>
             <form action="{% url 'deleteprod' product.id %}" method="post">
                 {% csrf_token %}
-                <button type="submit">Купить</button>
+                <button type="submit" class="btnbuy">Купить</button>
             </form>
         </div>
 
