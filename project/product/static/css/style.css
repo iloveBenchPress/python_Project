@@ -406,8 +406,20 @@ section {
 .logo2 {
   width: 32px;
   position: absolute;
-  margin-left: 83px;
+  margin-left: 40px; /*83*/
   margin-top: -3px;
+}
+.logo3 {
+  position: absolute;
+  margin-left: 568px;
+  text-decoration: none;
+}
+.logoBask {
+  width: 32px;
+}
+
+.imgbask {
+  width: 300px;
 }
 .err {
   text-align: center;

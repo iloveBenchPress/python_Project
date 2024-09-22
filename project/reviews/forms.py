@@ -5,7 +5,7 @@ from .models import Review
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
-        fields = ['memo'] # Убираем 'author' из списка полей
+        fields = ['memo']
 
     def __init__(self, *args, **kwargs):
         user = kwargs.pop('user', None)

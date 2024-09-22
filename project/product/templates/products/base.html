@@ -23,6 +23,8 @@
                 <li class="logoutus">
                     <img class="logo2" src="{% static 'products/logo2.png' %}" alt="" />
                     <li > {{ user.username }}</li>
+                    <li>15200 р.</li>
+                    <a href="{% url 'purchased' %}" class="logo3"><img class="logoBask" src="{% static 'products/basket.png' %}" alt="" /></a>
                         <form action="{% url 'logoutuser' %}" method="post">
                             {% csrf_token %}
                             <button class="top2">Выйти</button>

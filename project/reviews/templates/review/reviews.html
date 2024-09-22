@@ -5,9 +5,10 @@
 <h2 class="count">Отзывы: {{reviews.count}}</h2>
 {% for review in reviews %}
     <div class="element">
-        <h2 class="top"><a href="">{{ review.author }}</a></h2>
+
         <div class="blog_text">
-            <h5>{{ review.created|date:'d.m.Y' }}</h5>
+            <h2 class="top">{{ review.author }}</h2>
+            <h5>{{ review.created|date:'d.m.Y' }}</h5><br/>
             <p>{{ review.memo }}</p>
         </div>
     </div>

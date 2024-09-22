@@ -24,12 +24,13 @@ def detail(request,product_id):
 def deleteprod(request, product_id):
     product = get_object_or_404(Product,pk=product_id)
     if request.method == "POST":
-        del_obj=Purchased(title=product.title,description=product.description,price=product.price)
-
+        del_obj=Purchased(title=product.title,description=product.description,price=product.price,image=product.image.path,author=request.user)
         del_obj.save()
         product.delete()
         return redirect('index')
     return redirect('index')
+
+
 
 
 def signupuser(request):

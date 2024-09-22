@@ -1,0 +1,25 @@
+{% extends 'products/base.html' %}
+{% block content %}
+
+<h1>Ваши товары</h1>
+<h2 class="count">Товары: {{purchaseds.count}}</h2>
+{% for purchased in purchaseds %}
+
+<div class="element">
+
+        <div class="blog_text">
+            <h2 class="top">{{ purchased.title }}</h2>
+            <img class="imgbask" src="{{ purchased.image.url }}" alt="{{ purchased.title }}">
+            <h5>{{ purchased.description }}</h5>
+            <p>{{ purchased.price }} р.</p>
+            <form action="{% url 'delete_purchased' purchased.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btnbuy">Отменить заказ</button>
+            </form>
+        </div>
+
+    </div>
+
+{% endfor %}
+
+{% endblock%}
