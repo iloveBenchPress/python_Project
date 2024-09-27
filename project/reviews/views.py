@@ -5,10 +5,10 @@ from django.contrib.auth.decorators import login_required
 
 
 
-@login_required(login_url="loginuser")
+
 def reviews(request):
     reviews = Review.objects.order_by('-created')
-    if request.method == 'GET':
+    if request.method == 'GET' and request.user.is_authenticated:
 
         return render(request, 'review/reviews.html',{'reviews':reviews,'form':ReviewForm(user=request.user),'author': request.user})
     else:
@@ -20,7 +20,7 @@ def reviews(request):
             return redirect('reviews')
         except ValueError:
             return render(request, 'review/reviews.html',
-                          {'reviews':reviews,'form': ReviewForm(user=request.user), 'error': 'Переданы неверные данные. Попробуйте ещё раз'})
+                          {'reviews':reviews, 'error': 'Переданы неверные данные. Попробуйте ещё раз'})
 
 
 

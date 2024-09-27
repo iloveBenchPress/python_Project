@@ -1,0 +1,12 @@
+{% extends 'products/base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Изменение счёта</h1>
+<form class="form_wallet" method="POST" action="{% url 'edit_wallet' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="btn btn_wallet btn--sub btn--lg  my-md" type="submit" value="Изменить" />
+</form>
+
+{% endblock%}
