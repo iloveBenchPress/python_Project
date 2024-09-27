@@ -43,6 +43,7 @@ urlpatterns = [
     path('purchased/',purchased,name='purchased'),
     #удаление товара пользователем
     path('delete_purchased/<int:purchased_id>/', delete_purchased, name='delete_purchased'),
+    path('edit-wallet/',views.edit_wallet,name='edit_wallet'),
 
 ]
 

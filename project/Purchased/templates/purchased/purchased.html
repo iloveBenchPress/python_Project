@@ -1,10 +1,11 @@
 {% extends 'products/base.html' %}
 {% block content %}
 
-<h1>Ваши товары</h1>
-<h2 class="count">Товары: {{purchaseds.count}}</h2>
-{% for purchased in purchaseds %}
+<h1>Ваша корзина</h1>
+<h2 class="count">Заказы: {{purchaseds.count}}</h2>
 
+{% if purchaseds.count > 0 %}
+{% for purchased in purchaseds %}
 <div class="element">
 
         <div class="blog_text">
@@ -12,6 +13,7 @@
             <img class="imgbask" src="{{ purchased.image.url }}" alt="{{ purchased.title }}">
             <h5>{{ purchased.description }}</h5>
             <p>{{ purchased.price }} р.</p>
+            <h3>{{ purchased.status }}</h3>
             <form action="{% url 'delete_purchased' purchased.id %}" method="post">
                 {% csrf_token %}
                 <button type="submit" class="btnbuy">Отменить заказ</button>
@@ -19,7 +21,13 @@
         </div>
 
     </div>
-
 {% endfor %}
+{% else %}
+<div class="no_elem">
+    <p>У вас пока нет заказов 😔.</p>
+</div>
+{% endif %}
+
+
 
 {% endblock%}

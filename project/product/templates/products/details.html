@@ -8,10 +8,18 @@
         <div class="buysec">
             <div>{{ product.description }}</div></br>
             <div class="bprice">{{ product.price }} р.</div></br>
+            {% if error_message %}
+
+            <div class="error-message">{{ error_message }}</div>
+
+            {% else %}
+
             <form action="{% url 'deleteprod' product.id %}" method="post">
                 {% csrf_token %}
                 <button type="submit" class="btnbuy">Купить</button>
             </form>
+
+            {% endif %}
         </div>
 
 
