@@ -27,17 +27,6 @@ def main(request):
 
 @login_required(login_url="loginuser")
 def detail(request,product_id):
-    # wallet_user = CustomUser.objects.get(user=request.user)
-    # product = get_object_or_404(Product,pk=product_id)
-    # product.price = int(product.price.replace(" ", ""))  # Преобразование в число
-    # if wallet_user.value >= product.price:
-    #     return render(request,'products/details.html',{'product': product,'wallet_user': wallet_user})
-    # else:
-    #     return render(request, 'products/details.html', {
-    #         'product': product,
-    #         'wallet_user': wallet_user,
-    #         'error_message': 'У вас недостаточно средств.'
-    #     })
     wallet_user = CustomUser.objects.get(user=request.user)
     product = get_object_or_404(Product, pk=product_id)
     return render(request, 'products/details.html', {'product': product, 'wallet_user': wallet_user})
@@ -61,8 +50,6 @@ def deleteprod(request, product_id):
                  'wallet_user': wallet_user,
                  'error_message': 'У вас недостаточно средств.'
              })
-
-
 
 
 
