@@ -85,7 +85,7 @@ header {
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 1000;
+  z-index: 100000;
 }
 header .logo {
   font-weight: bold;
@@ -309,10 +309,11 @@ section {
   box-shadow: 0 2px 12px 2px #050505;
   border: 6px solid #1aff00;
   padding: 40px;
+
   box-sizing: border-box;
   border-radius: 15px;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 37px auto;
   text-align: center;
 }
 
@@ -432,7 +433,7 @@ section {
 .form_search {
   position: absolute;
   margin-top: 440px;
-  z-index: 31313113;
+  z-index: 3131;
   margin-left: 130px;
 }
 .form_wallet {
@@ -480,6 +481,7 @@ section {
 .wallet {
   position: absolute;
   margin-left: 500px;
+  text-align: left;
 }
 
 .username {

@@ -14,10 +14,12 @@
             <h5>{{ purchased.description }}</h5>
             <p>{{ purchased.price }} р.</p>
             <h3>{{ purchased.status }}</h3>
+            {% if purchased.status == 'В ожидании' %}
             <form action="{% url 'delete_purchased' purchased.id %}" method="post">
                 {% csrf_token %}
                 <button type="submit" class="btnbuy">Отменить заказ</button>
             </form>
+            {% endif %}
         </div>
 
     </div>

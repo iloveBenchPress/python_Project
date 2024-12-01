@@ -26,13 +26,16 @@
 
                     <a class="wallet" href="{% url 'edit_wallet' %}">
                         {% if wallet_user %}
-                        <li>{{ wallet_user.value }} р.</li>
+                        <li class="money">{{ wallet_user.value }} р.</li>
                         {% else %}
                         <li></li>
                         {% endif %}
                     </a>
 
                     <a href="{% url 'purchased' %}" class="logo3"><img class="logoBask" src="{% static 'products/basket.png' %}" alt="" /></a>
+
+
+
                         <form action="{% url 'logoutuser' %}" method="post">
                             {% csrf_token %}
                             <button class="top2">Выйти</button>

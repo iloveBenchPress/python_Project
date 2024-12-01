@@ -12,7 +12,7 @@ class Purchased(models.Model):
     description = models.CharField(max_length=250)
     price = models.CharField(max_length=50)
     image = models.ImageField(upload_to='products/images/')
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='В ожидании')
 
     def __str__(self):
         return self.author.username
