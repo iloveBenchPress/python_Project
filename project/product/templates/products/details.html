@@ -14,7 +14,7 @@
 
             {% else %}
 
-            <form action="{% url 'deleteprod' product.id %}" method="post">
+            <form action="{% url 'payform' product.id %}" method="post">
                 {% csrf_token %}
                 <button type="submit" class="btnbuy">Купить</button>
             </form>
@@ -24,7 +24,31 @@
 
 
 </div>
+<h1>Отзывы о товаре</h1>
 
 
 
+<!-- Список существующих отзывов -->
+<ul>
+    <h2 class="count">Отзывы: {{reviews.count}}</h2>
+    {% for review in reviews %}
+
+        <div class="element">
+
+            <div class="blog_text">
+                <h2 class="top">{{ review.author.username }}</h2>
+                <h5>{{ review.created|date:'d.m.Y' }}</h5><br/>
+                <p>{{ review.memo }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</ul>
+
+<!-- Форма для добавления отзыва -->
+<form action="" method="post" class="bg">
+    {% csrf_token %}
+    {{ review_form.memo }}
+    {{ review_form.memo.errors }}
+    <button type="submit" class="btn">Добавить комментарий</button>
+</form>
 {% endblock%}

@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404, redirect
-from .models import Product,CustomUser
+from .models import Product,CustomUser,ReviewsOfProduct
 from Purchased.models import Purchased
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth.models import User
@@ -7,8 +7,13 @@ from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
 from django.contrib.auth.decorators import login_required
 from .utils import search_products
-from .forms import WalletForm
+from .forms import WalletForm,PayForm,ReviewForm
 from django.contrib import messages
+from rest_framework import generics
+from rest_framework.response import Response
+from rest_framework.permissions import AllowAny
+from rest_framework_simplejwt.views import TokenObtainPairView
+from .serializers import UserSerializer
 
 def index(request):
     if request.user.is_authenticated:
@@ -26,32 +31,109 @@ def main(request):
     return render(request, 'products/main.html', {'main': main})
 
 @login_required(login_url="loginuser")
-def detail(request,product_id):
+def detail(request, product_id):
     wallet_user = CustomUser.objects.get(user=request.user)
     product = get_object_or_404(Product, pk=product_id)
-    return render(request, 'products/details.html', {'product': product, 'wallet_user': wallet_user})
+    reviews = product.reviews.all()  # Получаем отзывы для продукта
 
-def deleteprod(request, product_id):
-    product = get_object_or_404(Product,pk=product_id)
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST)
+
+        if review_form.is_valid():
+            review = ReviewsOfProduct(
+                product=product,
+                author=request.user,
+                memo=review_form.cleaned_data['memo']
+            )
+            review.save()
+            return redirect('detail', product_id=product.id)  # Перенаправляем на ту же страницу
+    else:
+        review_form = ReviewForm()  # Создаем пустую форму для отображения
+
+    return render(request, 'products/details.html', {
+        'product': product,
+        'wallet_user': wallet_user,
+        'reviews': reviews,  # Передаем отзывы в шаблон
+        'review_form': review_form,  # Передаем форму в шаблон
+    })
+
+# def deleteprod(request, product_id):
+#     product = get_object_or_404(Product,pk=product_id)
+#     wallet_user = CustomUser.objects.get(user=request.user)
+#     product.price = int(product.price)
+#     if wallet_user.value >= product.price:
+#         if request.method == "POST":
+#             wallet_user.value -= product.price
+#             wallet_user.save()
+#             del_obj=Purchased(title=product.title,description=product.description,price=product.price,image=product.image.path,author=request.user)
+#             del_obj.save()
+#             product.delete()
+#             return redirect('index')
+#         return redirect('index')
+#     else:
+#         return render(request, 'products/details.html', {
+#                  'product': product,
+#                  'wallet_user': wallet_user,
+#                  'error_message': 'У вас недостаточно средств.'
+#              })
+
+
+
+
+def payform(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
     wallet_user = CustomUser.objects.get(user=request.user)
     product.price = int(product.price)
     if wallet_user.value >= product.price:
-        if request.method == "POST":
-            wallet_user.value -= product.price
-            wallet_user.save()
-            del_obj=Purchased(title=product.title,description=product.description,price=product.price,image=product.image.path,author=request.user)
-            del_obj.save()
-            product.delete()
-            return redirect('index')
-        return redirect('index')
+        if request.method == 'POST':
+            form = PayForm(request.POST)
+            if form.is_valid():
+                email = form.cleaned_data['email']
+                wallet_user.value -= product.price
+                wallet_user.save()
+                del_obj=Purchased(title=product.title,description=product.description,price=product.price,image=product.image.path,author=request.user,email=email)
+                del_obj.save()
+                product.delete()
+                return redirect('index')
+        else:
+            form = PayForm()
+        return render(request,'products/pay_form.html',{
+            'product': product,
+            'wallet_user': wallet_user,
+            'form': form,
+        })
+
     else:
         return render(request, 'products/details.html', {
-                 'product': product,
-                 'wallet_user': wallet_user,
-                 'error_message': 'У вас недостаточно средств.'
-             })
+            'product': product,
+            'wallet_user': wallet_user,
+            'error_message': 'У вас недостаточно средств.'
+        })
 
 
+# def product_detail(request, product_id):
+#     product = get_object_or_404(Product, pk=product_id)
+#     reviews = product.reviews.all()
+#
+#     if request.method == 'POST':
+#         review_form = ReviewForm(request.POST)
+#
+#         if review_form.is_valid():
+#             review = ReviewsOfProduct(
+#                 product=product,
+#                 author=request.user,
+#                 memo=review_form.cleaned_data['memo']
+#             )
+#             review.save()
+#             return redirect('detail', product_id=product.id)
+#     else:
+#         review_form = ReviewForm()
+#
+#     return render(request, 'products/details.html', {
+#         'product': product,
+#         'reviews': reviews,
+#         'review_form': review_form,
+#     })
 
 def signupuser(request):
     if request.method == "GET":
@@ -92,6 +174,14 @@ def loginuser(request):
             login(request, user)
             return redirect('index')
 
+# class SignupView(generics.CreateAPIView):
+#     queryset = User.objects.all()
+#     serializer_class = UserSerializer
+#     permission_classes = [AllowAny]
+#
+# class CustomTokenObtainPairView(TokenObtainPairView):
+#     # Вы можете переопределить метод, если хотите добавить дополнительные поля в токен.
+#     pass
 
 def edit_wallet(request):
     profile = request.user.customuser

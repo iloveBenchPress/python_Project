@@ -493,3 +493,11 @@ section {
   font-size: 24px;
   text-align: center;
 }
+
+ul {
+  list-style-type: none;
+}
+
+.bg input {
+  margin: 10px;
+}

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, CustomUser
+from .models import Product, CustomUser,ReviewsOfProduct
 from django.utils.html import format_html, mark_safe
 from django.contrib.admin import site
 
@@ -23,4 +23,4 @@ class CustomUserAdmin(admin.ModelAdmin):
     list_display = ('user', 'value')
     search_fields = ('user__username',)
 
-
+admin.site.register(ReviewsOfProduct)

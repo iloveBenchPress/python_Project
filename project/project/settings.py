@@ -40,7 +40,15 @@ INSTALLED_APPS = [
     'product.apps.SkillsConfig',
     'Purchased.apps.PurchasedConfig',
     'reviews.apps.BlogConfig',
+    'rest_framework',
+    'rest_framework_simplejwt',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

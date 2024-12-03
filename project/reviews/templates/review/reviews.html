@@ -18,7 +18,7 @@
     {% if user.is_authenticated %}
     {% csrf_token %}
     <p>Пользователь: {{author.username}}</p>
-    {{ form.as_p }}
+    {{ form.memo }}
     <div class="center">
         <button class="btn">Оставить отзыв</button>
     </div>
