@@ -13,7 +13,10 @@
         </div>
     </div>
 {% endfor %}
-
+{% if success %}
+    <h2 style="text-align: center;color: green;">{{ success }}</h2>
+{% endif %}
+<h2 style="text-align: center;color: orangered ">{{ error }}</h2>
 <form method="post" class="bg">
     {% if user.is_authenticated %}
     {% csrf_token %}

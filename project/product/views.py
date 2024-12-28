@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404, redirect
-from .models import Product,CustomUser,ReviewsOfProduct
+from .models import Product,ReviewsOfProduct
 from Purchased.models import Purchased
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth.models import User
@@ -7,32 +7,42 @@ from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
 from django.contrib.auth.decorators import login_required
 from .utils import search_products
-from .forms import WalletForm,PayForm,ReviewForm
+from .forms import PayForm,ReviewForm
 from django.contrib import messages
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from rest_framework_simplejwt.views import TokenObtainPairView
 from .serializers import UserSerializer
+from django.dispatch import receiver
+from social_core.pipeline.social_auth import social_user
+from social_core.exceptions import AuthForbidden
+from .tasks import save_review, send_purchase_email
 
 def index(request):
+    product, search_query = search_products(request)
+    room_name = "Support-chat"
+
     if request.user.is_authenticated:
-        product, search_query = search_products(request)
-        wallet_user = get_object_or_404(CustomUser, user=request.user)
         return render(request, 'products/index.html',
-                      {'products': product, 'search_query': search_query, 'wallet_user': wallet_user})
+                      {'products': product, 'search_query': search_query,'room_name': room_name, 'is_index_page': True})
+
     else:
-        product, search_query = search_products(request)
         return render(request, 'products/index.html',
-                      {'products': product, 'search_query': search_query})
+                      {'products': product, 'search_query': search_query,'room_name': room_name, 'is_index_page': True})
+
 
 
 def main(request):
     return render(request, 'products/main.html', {'main': main})
 
+
+def contains_prohibited_words(content):
+    prohibited_words = ['сука','пизда']  # Добавьте свои слова
+    return any(word in content.lower() for word in prohibited_words)
 @login_required(login_url="loginuser")
 def detail(request, product_id):
-    wallet_user = CustomUser.objects.get(user=request.user)
+
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.reviews.all()  # Получаем отзывы для продукта
 
@@ -40,19 +50,50 @@ def detail(request, product_id):
         review_form = ReviewForm(request.POST)
 
         if review_form.is_valid():
-            review = ReviewsOfProduct(
-                product=product,
-                author=request.user,
-                memo=review_form.cleaned_data['memo']
-            )
-            review.save()
-            return redirect('detail', product_id=product.id)  # Перенаправляем на ту же страницу
+            memo = review_form.cleaned_data['memo']
+
+            # Валидация длины текста
+            if len(memo) > 500:
+                return render(request, 'products/details.html', {
+                    'product': product,
+                    'reviews': reviews,
+                    'review_form': review_form,
+                    'error': 'Отзыв не должен превышать 500 символов.'
+                })
+            if len(memo) == 0:
+                return render(request, 'products/details.html', {
+                    'product': product,
+                    'reviews': reviews,
+                    'review_form': review_form,
+                    'error': 'Нельзя отправить пустую форму.'
+                })
+            # Фильтрация нежелательных слов
+            if contains_prohibited_words(memo):
+                return render(request, 'products/details.html', {
+                    'product': product,
+                    'reviews': reviews,
+                    'review_form': review_form,
+                    'error': 'Ваш отзыв содержит недопустимые слова.'
+                })
+
+            # Отправка задачи в Celery для сохранения отзыва
+            save_review.delay(request.user.id,product.id, memo)
+
+            # Уведомление об успешной отправке
+            return redirect('detail', product_id=product.id)  # Перенаправляем на ту же страницу с сообщением об успехе
+
+        else:
+            return render(request, 'products/details.html', {
+                'product': product,
+                'reviews': reviews,
+                'review_form': review_form,
+                'error': 'Переданы неверные данные. Попробуйте ещё раз.'
+            })
     else:
         review_form = ReviewForm()  # Создаем пустую форму для отображения
 
     return render(request, 'products/details.html', {
         'product': product,
-        'wallet_user': wallet_user,
         'reviews': reviews,  # Передаем отзывы в шаблон
         'review_form': review_form,  # Передаем форму в шаблон
     })
@@ -78,37 +119,36 @@ def detail(request, product_id):
 #              })
 
 
-
-
 def payform(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
-    wallet_user = CustomUser.objects.get(user=request.user)
-    product.price = int(product.price)
-    if wallet_user.value >= product.price:
-        if request.method == 'POST':
-            form = PayForm(request.POST)
-            if form.is_valid():
-                email = form.cleaned_data['email']
-                wallet_user.value -= product.price
-                wallet_user.save()
-                del_obj=Purchased(title=product.title,description=product.description,price=product.price,image=product.image.path,author=request.user,email=email)
-                del_obj.save()
-                product.delete()
-                return redirect('index')
-        else:
-            form = PayForm()
-        return render(request,'products/pay_form.html',{
-            'product': product,
-            'wallet_user': wallet_user,
-            'form': form,
-        })
+    if request.method == 'POST':
+        form = PayForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            del_obj = Purchased(
+                title=product.title,
+                description=product.description,
+                price=product.price,
+                image=product.image.path,
+                author=request.user,
+                email=email
+            )
+            del_obj.save()
+            product.delete()
 
+            # Вызов задачи для отправки email
+            send_purchase_email.delay(email, product.title)
+
+            return redirect('index')
     else:
-        return render(request, 'products/details.html', {
-            'product': product,
-            'wallet_user': wallet_user,
-            'error_message': 'У вас недостаточно средств.'
-        })
+        form = PayForm()
+
+    return render(request, 'products/pay_form.html', {
+        'product': product,
+        'form': form,
+    })
+
+
 
 
 # def product_detail(request, product_id):
@@ -143,9 +183,7 @@ def signupuser(request):
             try:
                 user = User.objects.create_user(request.POST['username'], password=request.POST['password1'])
                 user.save()
-                # Создаем CustomUser после создания User
-                custom_user = CustomUser.objects.create(user=user)
-                custom_user.save()
+                user.backend = 'django.contrib.auth.backends.ModelBackend'
                 login(request, user)
                 return redirect('index')
             except IntegrityError:
@@ -174,6 +212,8 @@ def loginuser(request):
             login(request, user)
             return redirect('index')
 
+
+
 # class SignupView(generics.CreateAPIView):
 #     queryset = User.objects.all()
 #     serializer_class = UserSerializer
@@ -183,17 +223,6 @@ def loginuser(request):
 #     # Вы можете переопределить метод, если хотите добавить дополнительные поля в токен.
 #     pass
 
-def edit_wallet(request):
-    profile = request.user.customuser
-    if request.method == "POST" and request.user.is_authenticated:
-        form = WalletForm(request.POST, instance=profile)
-        if form.is_valid():
-            form.save()
-            return redirect('index')
-    else:
-        form = WalletForm(instance=profile)
 
-    context = {'form': form}
-    return render(request, 'products/edit_wallet.html', context)
 
 

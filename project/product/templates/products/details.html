@@ -36,14 +36,17 @@
         <div class="element">
 
             <div class="blog_text">
-                <h2 class="top">{{ review.author.username }}</h2>
+                <h2 class="top">{{ review.author }}</h2>
                 <h5>{{ review.created|date:'d.m.Y' }}</h5><br/>
                 <p>{{ review.memo }}</p>
             </div>
         </div>
     {% endfor %}
 </ul>
-
+{% if success %}
+    <h2 style="text-align: center;color: green;">{{ success }}</h2>
+{% endif %}
+<h2 style="text-align: center;color: orangered ">{{ error }}</h2>
 <!-- Форма для добавления отзыва -->
 <form action="" method="post" class="bg">
     {% csrf_token %}

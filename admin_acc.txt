@@ -1,2 +1,3 @@
 user: Sasha
 password: Global228228
+запуск Celery: celery -A project worker --loglevel=info --pool=solo

@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/fourth/devsearch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/project/product" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/project/Purchased" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/project/account" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/project/channel" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="inheritedJdk" />

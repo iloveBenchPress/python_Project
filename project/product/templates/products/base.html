@@ -22,17 +22,7 @@
                     <img class="logo2" src="{% static 'products/logo2.png' %}" alt="" />
                     <li class="username"> {{ user.username }}</li>
 
-                    <a class="wallet" href="{% url 'edit_wallet' %}">
-                        {% if wallet_user %}
-                        <li class="money">{{ wallet_user.value }} р.</li>
-                        {% else %}
-                        <li></li>
-                        {% endif %}
-                    </a>
-
                     <a href="{% url 'purchased' %}" class="logo3"><img class="logoBask" src="{% static 'products/basket.png' %}" alt="" /></a>
-
-
 
                         <form action="{% url 'logoutuser' %}" method="post">
                             {% csrf_token %}
@@ -56,8 +46,14 @@
         </div>
     </div>
     <section>
-      <div class="footer1">2024 © NIKE AIR<br />Москва | Санкт-Петербург</div>
-      <div class="footer2">Nike Original</div>
+        <div class="footer1">2024 © NIKE AIR<br />Москва | Санкт-Петербург</div>
+
+       {% if is_index_page %}
+    <div><a href="{% url 'chat_room' room_name=room_name %}">support</a></div>
+{% endif %}
+
+        <div class="footer2">Nike Original</div>
+
     </section>
     <script src="{% static 'js/app.js' %}"></script>
 </body>

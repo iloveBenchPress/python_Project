@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, CustomUser,ReviewsOfProduct
+from .models import Product,ReviewsOfProduct
 from django.utils.html import format_html, mark_safe
 from django.contrib.admin import site
 
@@ -18,9 +18,6 @@ class ProductAdmin(admin.ModelAdmin):
 
     image_tag.short_description = 'Изображение'
 
-@admin.register(CustomUser)
-class CustomUserAdmin(admin.ModelAdmin):
-    list_display = ('user', 'value')
-    search_fields = ('user__username',)
+
 
 admin.site.register(ReviewsOfProduct)

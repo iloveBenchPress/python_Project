@@ -1,18 +1,8 @@
 from Purchased.models import Purchased
-from .models import CustomUser,ReviewsOfProduct
+from .models import ReviewsOfProduct
 from django.forms import ModelForm
 from django import forms
 
-class WalletForm(ModelForm):
-    class Meta:
-        model = CustomUser
-        fields = ['value']
-
-    def __init__(self, *args, **kwargs):
-        user = kwargs.pop('user', None)
-        super().__init__(*args, **kwargs)
-        if user:
-            self.instance.author = user
 
 class PayForm(ModelForm):
     class Meta:
