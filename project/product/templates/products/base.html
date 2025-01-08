@@ -6,6 +6,7 @@
     <title>nike-sneakers</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="icon" href="{% static 'products/logo.png' %}">
+    <script src="https://unpkg.com/htmx.org@1.9.3"></script>
 </head>
 <body>
     <header>
@@ -49,7 +50,7 @@
         <div class="footer1">2024 © NIKE AIR<br />Москва | Санкт-Петербург</div>
 
        {% if is_index_page %}
-    <div><a href="{% url 'chat_room' room_name=room_name %}">support</a></div>
+    <div><a href="{% url 'chat_room' room_name=room_name %}">support chat</a></div>
 {% endif %}
 
         <div class="footer2">Nike Original</div>

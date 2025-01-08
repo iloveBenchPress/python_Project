@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -56,12 +57,13 @@ INSTALLED_APPS = [
 ]
 
 ASGI_APPLICATION = 'project.asgi.application'
+# WSGI_APPLICATION = 'project.wsgi.application'
 
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],
+            "hosts": [('127.0.0.1', 6380)],
         },
     },
 }
@@ -81,6 +83,12 @@ EMAIL_HOST_USER = 'sasashiraev543@gmail.com'
 EMAIL_HOST_PASSWORD = 'amvpnivjyyocxihx'
 DEFAULT_FROM_EMAIL = 'sasashiraev543@gmail.com'
 #amvp nivj yyoc xihx
+
+# Юкасса
+
+YOOKASSA_SHOP_ID = os.getenv("YOOKASSA_SHOP_ID")
+YOOKASSA_SECRET_KEY = os.getenv("YOOKASSA_SECRET_KEY")
+
 
 SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.social_details',
@@ -146,7 +154,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'project.wsgi.application'
+
 
 
 # Database

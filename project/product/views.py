@@ -18,7 +18,13 @@ from django.dispatch import receiver
 from social_core.pipeline.social_auth import social_user
 from social_core.exceptions import AuthForbidden
 from .tasks import save_review, send_purchase_email
+from yookassa import Configuration, Payment
+from uuid import uuid4
+from django.core.mail import send_mail
+from django.conf import settings
 
+
+Configuration.configure('1010382', 'test_3OArUjeWFRS8sjIa44FSJeIKMOlH6pDVBL5Q6kjuk6A')
 def index(request):
     product, search_query = search_products(request)
     room_name = "Support-chat"
@@ -125,21 +131,29 @@ def payform(request, product_id):
         form = PayForm(request.POST)
         if form.is_valid():
             email = form.cleaned_data['email']
-            del_obj = Purchased(
-                title=product.title,
-                description=product.description,
-                price=product.price,
-                image=product.image.path,
-                author=request.user,
-                email=email
-            )
-            del_obj.save()
-            product.delete()
+            request.session['email'] = email  # Сохранение email в сессии
+            request.session['product_id'] = product_id  # Сохранение product_id в сессии
 
-            # Вызов задачи для отправки email
-            send_purchase_email.delay(email, product.title)
+            # Создание платежа в YooKassa
+            payment = Payment.create({
+                "amount": {
+                    "value": str(product.price),
+                    "currency": "RUB"  # Укажите нужную валюту
+                },
+                "confirmation": {
+                    "type": "redirect",
+                    "return_url": f"http://127.0.0.1:8000/{product_id}/success/",  # URL для перенаправления после успешной оплаты
+                },
+                "capture": True,
+                "description": f"Оплата за {product.title}",
+            }, uuid4())
 
-            return redirect('index')
+            # Сохранение payment_id в сессии
+            request.session['payment_id'] = payment.id
+
+            # Перенаправление на страницу оплаты YooKassa
+            return redirect(payment.confirmation.confirmation_url)
+
     else:
         form = PayForm()
 
@@ -149,7 +163,45 @@ def payform(request, product_id):
     })
 
 
+def payment_success(request, product_id):
+    payment_id = request.session.get('payment_id')
+    email = request.session.get('email')
 
+    # Проверка статуса платежа
+    payment = Payment.find_one(payment_id)
+
+    if payment.status == 'succeeded':
+        product = get_object_or_404(Product, pk=product_id)
+
+        # Создание записи о покупке
+        purchased = Purchased(
+            title=product.title,
+            description=product.description,
+            price=product.price,
+            image=product.image.path,
+            author=request.user,
+            email=email
+        )
+        purchased.save()
+        product.delete()
+        # Отправка сообщения на почту
+        send_mail(
+            'Ваш заказ успешно оплачен',
+            f'Спасибо за покупку {product.title}.',
+            settings.DEFAULT_FROM_EMAIL,
+            [email],
+            fail_silently=False,
+        )
+
+        # Очистка сессии
+        del request.session['payment_id']
+        del request.session['email']
+
+        return render(request, 'products/success.html', {'product': product})
+
+    return render(request, 'products/failure.html')
+def payment_failure(request):
+    return render(request, 'products/failure.html')
 
 # def product_detail(request, product_id):
 #     product = get_object_or_404(Product, pk=product_id)
